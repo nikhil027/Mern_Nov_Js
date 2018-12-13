@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Increment & Decrement
+    </title>
+</head>
+
+<body>
+    <H1 id='heading'>0</H1>
+    <button id='btnInc'> Increase (+) </button>
+    <t></t>
+    <button id='btnDec'> Decrease (-) </button>
+    <t></t>
+    <button id='btnSet'> Set your own </button>
+    <t></t>
+    <button id='btnRes'> Reset </button>
+    <script>
+        const btnIncHandle = document.getElementById('btnInc')
+        const btnDecHandle = document.getElementById('btnDec')
+        const btnResHandle = document.getElementById('btnRes')
+        const btnSetHandle = document.getElementById('btnSet')
+        const headingHandle = document.getElementById('heading')
+        let count = 0
+        btnIncHandle.addEventListener('click', function () {
+            count++
+            headingHandle.textContent = count
+        })
+        btnDecHandle.addEventListener('click', function () {
+            count--
+            if(count<0){count=0}
+            headingHandle.textContent = count
+        })
+        btnResHandle.addEventListener('click', function () {
+            let confVal = confirm('The counter will reset to 0')
+            if(confVal){count=0}
+            headingHandle.textContent = count
+        })
+        btnSetHandle.addEventListener('click', function () {
+            let setVal = prompt('Enter your your value')
+            count = setVal
+            headingHandle.textContent = count
+        })
+    </script>
+</body>
+
+</html>

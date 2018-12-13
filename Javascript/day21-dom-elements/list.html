@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+            template title 
+    </title>
+</head>
+<body>
+    <h2>Places to visit</h2>
+    <script>
+        const ulTag = document.createElement('ul')
+
+        const li1 = document.createElement('li')
+        li1.textContent = 'Lalbagh'
+
+        const li2 = document.createElement('li')
+        li2.textContent = 'Cubbon Park'
+
+        const li3 = document.createElement('li')
+        li3.textContent = 'MG Road'
+
+        ulTag.appendChild(li1)
+        ulTag.appendChild(li2)
+        ulTag.appendChild(li3)
+
+        document.body.appendChild(ulTag)
+
+        console.log(ulTag)
+        console.dir(ulTag)
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+            Menu List
+    </title>
+</head>
+<body>
+    
+    <script>
+        const menuItems = [
+            {id:1, name:'dose', isVeg: true},
+            {id:2, name:'coffee', isVeg: true},
+            {id:3, name:'butter chicken', isVeg: false},
+            {id:4, name:'chicken biryani', isVeg: false}
+        ]
+
+        const h3Veg = document.createElement('h3Veg')
+        h3Veg.textContent = `Listing Veg Items`
+        document.body.appendChild(h3Veg)
+        
+        const olVeg = document.createElement('ol')
+        menuItems.forEach(function(item){
+            if(item.isVeg){
+                const li = document.createElement('li')
+                li.textContent = `${item.name}`
+                olVeg.appendChild(li)
+            } 
+        })
+
+        document.body.appendChild(olVeg)
+
+        const h3NonVeg = document.createElement('h3NonVeg')
+        h3NonVeg.textContent = `Listing NonVeg Items`
+        document.body.appendChild(h3NonVeg)
+        
+        const olNonVeg = document.createElement('ol')
+        menuItems.forEach(function(item){
+            if(!(item.isVeg)){
+                const li = document.createElement('li')
+                li.textContent = `${item.name}`
+                olNonVeg.appendChild(li)
+            } 
+        })
+
+        document.body.appendChild(olNonVeg)
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+            template title 
+    </title>
+</head>
+<body>
+    <!-- <a href="./1-hello-world.html"><h1>Hello World</h1></a> ------
+    <a href="http://www.google.com"><h1>Hey Google</h1></a> -->
+    <script>
+        const tag = document.createElement('a')
+        tag.setAttribute('href','http://www.google.com')
+        tag.textContent = 'Hey Google'
+        document.body.appendChild(tag)
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+            Players 
+    </title>
+</head>
+<body>
+    
+    <script>
+        const players = ['virat', 'sachin', 'rahul', 'raina', 'ashwin', 'dhoni', 'zaheer', 'rohit']
+
+        const h2 = document.createElement('h2')
+        h2.textContent =   `Listing players - ${players.length}`
+        document.body.appendChild(h2)
+
+        const ul = document.createElement('ul')
+
+        players.sort().forEach(function(player){
+            const li = document.createElement('li')
+            li.textContent = player.charAt(0).toUpperCase() + player.slice(1)
+            ul.appendChild(li)
+        })
+
+        document.body.appendChild(ul)
+    
+    </script>
+</body>
+
+</html>

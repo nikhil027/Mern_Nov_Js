@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+            Menu List
+    </title>
+</head>
+<body>
+    
+    <script>
+        const menuItems = [
+            {id:1, name:'dose', isVeg: true},
+            {id:2, name:'coffee', isVeg: true},
+            {id:3, name:'butter chicken', isVeg: false},
+            {id:4, name:'chicken biryani', isVeg: false}
+        ]
+
+        const h2 = document.createElement('h2')
+        h2.textContent = `Listing Items - ${menuItems.length}`
+        document.body.appendChild(h2)
+        
+        const ul = document.createElement('ul')
+        menuItems.forEach(function(item){
+            var isVegFlg = 'Veg'
+            if(!(item.isVeg)){
+                isVegFlg = 'Non Veg'
+            }
+            const li = document.createElement('li')
+            li.textContent = `${item.name} - ${isVegFlg}`
+            ul.appendChild(li)
+        })
+
+        document.body.appendChild(ul)
+
+        for(var i=0; i<ul.childElementCount; i++){
+            console.log(ul.children[i].textContent)
+            // if(ul.children[i].textContent.includes('Veg')){
+            //     ul.removeChild(ul.children[i])
+            // }
+        }    
+
+    </script>
+</body>
+
+</html>
