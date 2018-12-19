@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+            Text Area
+    </title>
+</head>
+<body>
+    <h2> Word Count </h2>
+    
+    <form>
+        <!-- <label for="text"> Word Count </label> -->
+        <textarea id="text" name="text"></textarea><br>
+    </form>
+    <p>The paragraph has </p> <p id='characterCount'> </p> <p> characters and </p> <p id='wordCount'> </p><p> words.</p>
+    
+    <script>
+        const textHandle = document.getElementById('text')
+        const characterCount = document.getElementById('characterCount')
+        const wordCount = document.getElementById('wordCount')
+        
+        let wordCounter =0 
+        textHandle.addEventListener('keyup',function(){
+            console.log(textHandle.value)
+            let characterCounter = textHandle.value.length
+            characterCount.textContent = characterCounter
+            // let wordCount = 0
+            if(characterCounter > 0){
+                wordCounter = textHandle.value.split(' ').length
+                wordCount.textContent = wordCounter
+            } else {
+                wordCounter = 0
+                wordCount.textContent = wordCounter
+            }
+            
+            console.log(characterCounter, wordCounter)
+        })
+
+        
+    </script>
+</body>
+
+</html>

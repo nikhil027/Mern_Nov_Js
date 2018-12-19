@@ -1,0 +1,14 @@
+<users>
+    <user>
+        <id>1</id>
+        <name> Ramu </name>
+    </user>
+    <user>
+        <id>2</id>
+        <name> Ravi </name>
+    </user>
+    <user>
+        <id>3</id>
+        <name> Somu </name>
+    </user>
+</users>

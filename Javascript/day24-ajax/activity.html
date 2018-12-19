@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+            Get My Location 
+    </title>
+</head>
+<body>
+   
+    <script>
+        const btn = document.createElement('button')
+        btn.textContent = 'Get My Location'
+        const div = document.createElement('div')
+        document.body.appendChild(div)
+        div.appendChild(btn)
+        const apiKey = 'wielhko7cSgyzaLbCUd3Kn1AddZEIxGY'
+        btn.addEventListener('click',function(){
+            navigator.geolocation.getCurrentPosition(function(position) {
+                var geoLat = position.coords.latitude
+                var geoLong = position.coords.longitude
+                //console.log(position.coords.latitude, position.coords.longitude)
+                let url = `http://www.mapquestapi.com/geocoding/v1/reverse?key=${apiKey}&location=${geoLat},${geoLong}&includeRoadMetadata=true&includeNearestIntersection=true`
+                
+                const ul = document.createElement('ul')
+                const li1 = document.createElement('li')
+                const li2 = document.createElement('li')
+                li1.textContent = geoLat
+                li2.textContent = geoLong
+                ul.appendChild(li1)
+                ul.appendChild(li2)
+                document.body.appendChild(ul)
+                const xhr = new XMLHttpRequest()
+                xhr.open('GET',url)
+                xhr.send()
+                xhr.onload = function(){
+                    console.log(xhr.responseText)
+                    const location = JSON.parse(xhr.responseText)
+                    console.log(location.results[0].locations[0].mapUrl) 
+                    const img = document.createElement('img')
+                    img.src = location.results[0].locations[0].mapUrl
+                    document.body.appendChild(img)   
+                }
+                
+
+            })
+        })
+    </script>
+</body>
+
+</html>

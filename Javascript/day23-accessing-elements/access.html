@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+            Accessing Methods 
+    </title>
+</head>
+<body>
+    <h2 id='heading'> Jayanagar Associates </h2>
+
+    <p> We are the best designers in the city...</p>
+
+    <h3> Services offered: </h3>
+    <ul>
+        <li> Interior Design </li>
+        <li> Construction </li>
+        <li> Architecture </li>
+    </ul>
+    <p class='contact'>Get in touch</p>
+    <p class='contact'>Address: Jayanagar</p>
+
+    <script>
+        // 1. By Id
+        const headingHandle = document.getElementById('heading')
+        console.log(headingHandle)
+
+        // 2. By ClassName
+        const contactElements = document.getElementsByClassName('contact')
+        console.log(contactElements)
+
+        // 3. By TagName
+        const liElements = document.getElementsByTagName('li')
+        console.log(liElements)
+
+        // 4. querySelector('#id')
+        const headingHandle2 = document.querySelector('#heading')
+        console.log(headingHandle2)
+
+        // 5. querySelector('.className') - returns the first element under the className
+        const firstContactElement = document.querySelector('.contact')
+        console.log(firstContactElement)
+        
+        // 6. querySelectorAll('.className') - returns all the elements under the className in a NodeList
+        const contactElements2 = document.querySelectorAll('.contact')
+        console.log(contactElements2)
+
+        // 7. querySelectorAll('tagName') - returns all the elements under the tagName in a NodeList
+        const liElements2 = document.querySelectorAll('li')
+        console.log(liElements2)
+    </script>
+</body>
+
+</html>
