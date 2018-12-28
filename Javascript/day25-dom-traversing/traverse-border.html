@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+            Movies 
+    </title>
+</head>
+<body>
+    <h1>Movie List</h1>
+    <h2>Kill Bill</h2>
+    <p>This is some stupid text, it is supposed to be about the movie stated above but Im in no mood to type all those, please dont read aloud Thanks!!!</p>
+
+    <h3>Director</h3>
+    <ul>
+        <li>Uppi</li>
+    </ul>
+
+    <div>
+        <h3>Actors</h3>
+        <ul>
+            <li>Naanu</li>
+            <li>Nanavanalla</li>
+            <li>Neenu</li>
+        </ul>
+    </div>
+
+    <div>
+        <h3>Genere</h3>
+        <ul>
+            <li>Action</li>
+            <li>Drama</li>
+            <li>Suspence</li>
+        </ul>
+    </div>
+    <script>
+        const html = document.documentElement
+        html.style.border = '2px solid brown'
+        const body = html.children[1] // html -- body
+        body.children[0].style.border = '2px solid red' // H1
+        body.children[1].style.border = '2px solid green' // H2
+        body.children[2].style.border = '2px solid orange' // paragraph
+        body.children[3].style.border = '2px solid blue' // H3
+        body.children[4].children[0].style.border = '2px solid yellow' // Ul -- first element
+        body.children[5].style.border = '2px solid pink' // div
+        body.children[5].children[0].style.border = '2px solid black' // div -- h3
+        body.children[5].children[1].style.border = '2px solid black' // div -- ul
+        body.children[5].children[1].children[0].style.border = '2px solid black' // div -- ul -- li1
+        body.children[5].children[1].children[1].style.border = '2px solid black' // div -- ul -- li2
+        body.children[5].children[1].children[2].style.border = '2px solid black' // div -- ul -- li3
+        body.children[6].style.border = '2px solid brown' // div 2
+        body.children[6].children[0].style.border = '2px solid red' // div2 -- h3
+        body.children[6].children[1].style.border = '2px solid green' // div2 -- ul
+        body.children[6].children[1].children[0].style.border = '2px solid orange' // div2 -- ul -- li1
+        body.children[6].children[1].children[1].style.border = '2px solid blue' // div2 -- ul -- li2
+        body.children[6].children[1].children[2].style.border = '2px solid pink' // div2 -- ul -- li3    
+    </script>
+</body>
+
+</html>

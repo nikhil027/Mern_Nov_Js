@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+            Movies 
+    </title>
+</head>
+<body>
+    <h1>Movie List</h1>
+    <h2>Kill Bill</h2>
+    <p>This is some stupid text, it is supposed to be about the movie stated above but Im in no mood to type all those, please dont read aloud Thanks!!!</p>
+
+    <h3>Director</h3>
+    <ul>
+        <li>Uppi</li>
+    </ul>
+
+    <div>
+        <h3>Actors</h3>
+        <ul>
+            <li>Naanu</li>
+            <li>Nanavanalla</li>
+            <li>Neenu</li>
+        </ul>
+    </div>
+
+    <div>
+        <h3>Genere</h3>
+        <ul>
+            <li>Action</li>
+            <li>Drama</li>
+            <li>Suspence</li>
+        </ul>
+    </div>
+    <script>
+        const html = document.documentElement
+
+        console.log('children of html', html.children, ' count:', html.childElementCount)
+        console.log('child of head', html.children[0].children)
+
+        html.children[0].children[0].textContent = 'DOM Traversing' // html -- head -- title
+        document.title = 'Dom traversing direct'
+
+        const body = html.children[1] // html -- body
+        console.log(body)
+
+        console.log('body children count', body.childElementCount)
+        console,log('all children of body', body.children)
+
+        const actorsHandle = document.getElementById('actors')
+
+        // Children
+        console.log('actors children', actorsHandle.children)
+        console.log('first child', actorsHandle.children[0], actorsHandle.firstElementChild)
+        console.log('second child', actorsHandle.children[1])
+        console.log('last child', actorsHandle.children[actorsHandle.childElementCount-1], actorsHandle.lastElementChild)
+
+        //Sibblings
+        console.log(body.firstElementChild.nextElementSibling)
+        console.log(body.firstElementChild.previousElementSibling) 
+
+        // Parents and Grand Parents
+        console.log('getting parent', actorsHandle.parentElement)
+        console.log('getting grand parent', actorsHandle.parentElement.parentElement)
+    
+    </script>
+</body>
+
+</html>

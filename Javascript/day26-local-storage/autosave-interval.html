@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+           Auto Save
+    </title>
+</head>
+<body>
+    <h2>Start your story</h2>
+
+    <textarea id="text" cols="30" rows="10"></textarea>
+
+    <script>
+        const textHandle = document.getElementById('text')
+        textHandle.value = localStorage.getItem('text')
+        setInterval(function(){
+            localStorage.setItem('text',textHandle.value)
+            console.log('saved')
+        },5000)
+        
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+            Movies 
+    </title>
+</head>
+<body>
+    <h1>Movie List</h1>
+    <h2>Kill Bill</h2>
+    <p>This is some stupid text, it is supposed to be about the movie stated above but Im in no mood to type all those, please dont read aloud Thanks!!!</p>
+
+    <h3>Director</h3>
+    <ul>
+        <li>Uppi</li>
+    </ul>
+
+    <h3>Actors</h3>
+    <ul id="actors">
+        <li>Naanu</li>
+        <li>Nanavanalla</li>
+        <li>Neenu</li>
+    </ul>
+    <script>
+        const allUls = document.getElementsByTagName('ul')
+        const actorlis = allUls[1].getElementsByTagName('li')
+        console.log(actorlis)
+
+        const actorHandle = document.getElementById('actors')
+        const actorslis1 = actorHandle.getElementsByTagName('li')
+        console.log(actorslis1)
+    </script>
+</body>
+
+</html>
